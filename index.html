@@ -1,241 +1,442 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>White Hu | Fitness Journey</title>
+<title>FITTRACK | The Home of Real Transformations</title>
 
 <style>
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
-    color:white;
-    min-height:100vh;
+font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+background:#0a0a0a;
+color:white;
+line-height:1.6;
 }
 
 .container{
-    max-width:900px;
-    margin:auto;
-    padding:40px 20px;
+max-width:1200px;
+margin:auto;
+padding:0 20px;
 }
+
+/* HERO */
 
 .hero{
-    text-align:center;
-    margin-top:30px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+background:
+linear-gradient(
+rgba(0,0,0,.75),
+rgba(0,0,0,.75)
+),
+url("https://images.unsplash.com/photo-1534438327276-14e5300c3a48?q=80&w=1800");
+background-size:cover;
+background-position:center;
 }
 
-.avatar{
-    width:160px;
-    height:160px;
-    border-radius:50%;
-    margin:auto;
-    background:linear-gradient(135deg,#22c55e,#06b6d4);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    font-size:60px;
-    font-weight:bold;
-    box-shadow:0 0 30px rgba(34,197,94,.4);
+.hero h1{
+font-size:90px;
+font-weight:800;
+letter-spacing:3px;
 }
 
-h1{
-    margin-top:25px;
-    font-size:56px;
+.hero h2{
+font-size:32px;
+color:#94a3b8;
+margin-top:15px;
 }
 
-.subtitle{
-    font-size:24px;
-    color:#94a3b8;
-    margin-top:10px;
+.hero p{
+max-width:700px;
+margin:30px auto;
+font-size:20px;
+color:#cbd5e1;
 }
 
-.location{
-    margin-top:15px;
-    color:#cbd5e1;
+.buttons{
+margin-top:30px;
+}
+
+.btn{
+display:inline-block;
+padding:15px 30px;
+border-radius:12px;
+text-decoration:none;
+font-weight:bold;
+margin:10px;
+transition:.3s;
+}
+
+.primary{
+background:#22c55e;
+color:white;
+}
+
+.secondary{
+background:#1f2937;
+color:white;
+}
+
+.btn:hover{
+transform:translateY(-3px);
+}
+
+/* SECTION */
+
+section{
+padding:100px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:42px;
+margin-bottom:50px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
 }
 
 .card{
-    background:rgba(255,255,255,.05);
-    backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,.08);
-    border-radius:20px;
-    padding:30px;
-    margin-top:30px;
+background:#111827;
+padding:25px;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05);
 }
 
-.card h2{
-    margin-bottom:15px;
+.card h3{
+margin-bottom:15px;
 }
 
-.socials{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-    gap:15px;
-    margin-top:20px;
+.coming{
+color:#f59e0b;
+font-weight:bold;
+margin-top:10px;
 }
 
-.social-btn{
-    display:block;
-    text-decoration:none;
-    color:white;
-    padding:15px;
-    border-radius:15px;
-    background:#1e293b;
-    transition:.3s;
+/* CHART */
+
+.chart-box{
+height:280px;
+border:2px dashed #334155;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:22px;
+color:#64748b;
 }
 
-.social-btn:hover{
-    transform:translateY(-3px);
-    background:#334155;
+/* FOUNDER */
+
+.founder{
+text-align:center;
 }
 
-.stats{
-    display:grid;
-    grid-template-columns:repeat(3,1fr);
-    gap:20px;
-    text-align:center;
-    margin-top:20px;
+.founder h3{
+font-size:36px;
+margin-bottom:10px;
 }
 
-.stat{
-    padding:20px;
-    background:#111827;
-    border-radius:15px;
+.founder p{
+max-width:700px;
+margin:auto;
+color:#cbd5e1;
 }
 
-.number{
-    font-size:32px;
-    font-weight:bold;
-    color:#22c55e;
-}
+/* FOOTER */
 
 footer{
-    text-align:center;
-    margin-top:50px;
-    color:#94a3b8;
+padding:50px;
+text-align:center;
+color:#64748b;
+border-top:1px solid #1f2937;
 }
+
+/* MOBILE */
 
 @media(max-width:768px){
 
-h1{
-    font-size:40px;
+.hero h1{
+font-size:50px;
 }
 
-.stats{
-    grid-template-columns:1fr;
+.hero h2{
+font-size:22px;
+}
+
+.hero p{
+font-size:16px;
+}
+
+.section-title{
+font-size:30px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
-<div class="container">
+<section class="hero">
 
-    <div class="hero">
+<div>
 
-        <div class="avatar">
-            WH
-        </div>
+<h1>FITTRACK</h1>
 
-        <h1>White Hu</h1>
+<h2>The Home of Real Transformations</h2>
 
-        <div class="subtitle">
-            Fitness Journey
-        </div>
+<p>
 
-        <div class="location">
-            📍 Wuhan, China
-        </div>
+Track your body.
+Visualize your growth.
+Build the strongest version of yourself.
 
-    </div>
+</p>
 
-    <div class="card">
+<div class="buttons">
 
-        <h2>About Me</h2>
+<a href="#features" class="btn primary">
+Explore Features
+</a>
 
-        <p>
-            Natural lifter from Wuhan.
-            Documenting my fitness journey, nutrition,
-            muscle building and personal growth.
-        </p>
-
-    </div>
-
-    <div class="card">
-
-        <h2>Current Stats</h2>
-
-        <div class="stats">
-
-            <div class="stat">
-                <div class="number">173</div>
-                <div>Height (cm)</div>
-            </div>
-
-            <div class="stat">
-                <div class="number">70</div>
-                <div>Weight (kg)</div>
-            </div>
-
-            <div class="stat">
-                <div class="number">20%</div>
-                <div>Body Fat</div>
-            </div>
-
-        </div>
-
-    </div>
-
-    <div class="card">
-
-        <h2>My Platforms</h2>
-
-        <div class="socials">
-
-            <a href="#" class="social-btn">
-                🎥 YouTube
-            </a>
-
-            <a href="#" class="social-btn">
-                🎵 TikTok
-            </a>
-
-            <a href="#" class="social-btn">
-                📷 Instagram
-            </a>
-
-            <a href="#" class="social-btn">
-                📕 Xiaohongshu
-            </a>
-
-            <a href="#" class="social-btn">
-                🎬 Douyin
-            </a>
-
-            <a href="#" class="social-btn">
-                ✉ Contact
-            </a>
-
-        </div>
-
-    </div>
-
-    <footer>
-        © 2026 White Hu · Fitness Journey
-    </footer>
+<a href="#community" class="btn secondary">
+Community
+</a>
 
 </div>
+
+</div>
+
+</section>
+
+<section id="features">
+
+<div class="container">
+
+<h2 class="section-title">
+Track Every Change
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>📈 Weight Tracking</h3>
+Track your body weight journey.
+</div>
+
+<div class="card">
+<h3>📉 Body Fat Tracking</h3>
+Monitor body composition changes.
+</div>
+
+<div class="card">
+<h3>📷 Progress Photos</h3>
+Visualize your transformation.
+</div>
+
+<div class="card">
+<h3>📊 Smart Analytics</h3>
+Automatic growth charts.
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Transformation Gallery
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Anonymous User #001</h3>
++12kg Muscle Gain
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+<h3>Anonymous User #002</h3>
+-18kg Fat Loss
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+<h3>Anonymous User #003</h3>
+Body Recomposition
+<div class="coming">Coming Soon...</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Dashboard Preview
+</h2>
+
+<div class="chart-box">
+
+Weight Chart / Body Fat Chart <br>
+Coming Soon...
+
+</div>
+
+</div>
+
+</section>
+
+<section id="community">
+
+<div class="container">
+
+<h2 class="section-title">
+Community
+</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>👥 Anonymous Sharing</h3>
+Coming Soon...
+</div>
+
+<div class="card">
+<h3>🏆 Transformation Rankings</h3>
+Coming Soon...
+</div>
+
+<div class="card">
+<h3>📚 Fitness Experience</h3>
+Coming Soon...
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+Account System
+</h2>
+
+<div class="grid">
+
+<div class="card">
+📧 Email Login
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+📱 Phone Login
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+🌎 Google Login
+<div class="coming">Coming Soon...</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">
+AI Coach
+</h2>
+
+<div class="grid">
+
+<div class="card">
+🥗 Nutrition Analysis
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+🏋 Training Suggestions
+<div class="coming">Coming Soon...</div>
+</div>
+
+<div class="card">
+🤖 Growth Prediction
+<div class="coming">Coming Soon...</div>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="container founder">
+
+<h3>White Hu</h3>
+
+<p>
+
+Natural Lifter from Wuhan.
+
+Building FITTRACK to help people track,
+visualize and share real fitness transformations.
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 FITTRACK
+
+</footer>
 
 </body>
 </html>
