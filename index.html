@@ -1,46 +1,241 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
 <head>
-<meta charset="utf-8">
-<title>White Hu Fitness</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>White Hu | Fitness Journey</title>
+
 <style>
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
 body{
-    font-family:Arial,sans-serif;
-    max-width:800px;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+    background:linear-gradient(135deg,#0f172a,#111827,#1e293b);
+    color:white;
+    min-height:100vh;
+}
+
+.container{
+    max-width:900px;
     margin:auto;
-    padding:40px;
+    padding:40px 20px;
+}
+
+.hero{
     text-align:center;
+    margin-top:30px;
 }
+
+.avatar{
+    width:160px;
+    height:160px;
+    border-radius:50%;
+    margin:auto;
+    background:linear-gradient(135deg,#22c55e,#06b6d4);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:60px;
+    font-weight:bold;
+    box-shadow:0 0 30px rgba(34,197,94,.4);
+}
+
 h1{
-    font-size:48px;
+    margin-top:25px;
+    font-size:56px;
 }
-a{
+
+.subtitle{
+    font-size:24px;
+    color:#94a3b8;
+    margin-top:10px;
+}
+
+.location{
+    margin-top:15px;
+    color:#cbd5e1;
+}
+
+.card{
+    background:rgba(255,255,255,.05);
+    backdrop-filter:blur(10px);
+    border:1px solid rgba(255,255,255,.08);
+    border-radius:20px;
+    padding:30px;
+    margin-top:30px;
+}
+
+.card h2{
+    margin-bottom:15px;
+}
+
+.socials{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:15px;
+    margin-top:20px;
+}
+
+.social-btn{
     display:block;
-    margin:10px;
+    text-decoration:none;
+    color:white;
+    padding:15px;
+    border-radius:15px;
+    background:#1e293b;
+    transition:.3s;
 }
+
+.social-btn:hover{
+    transform:translateY(-3px);
+    background:#334155;
+}
+
+.stats{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+    text-align:center;
+    margin-top:20px;
+}
+
+.stat{
+    padding:20px;
+    background:#111827;
+    border-radius:15px;
+}
+
+.number{
+    font-size:32px;
+    font-weight:bold;
+    color:#22c55e;
+}
+
+footer{
+    text-align:center;
+    margin-top:50px;
+    color:#94a3b8;
+}
+
+@media(max-width:768px){
+
+h1{
+    font-size:40px;
+}
+
+.stats{
+    grid-template-columns:1fr;
+}
+
+}
+
 </style>
 </head>
 
 <body>
 
-<h1>White Hu</h1>
+<div class="container">
 
-<h2>Fitness Journey</h2>
+    <div class="hero">
 
-<p>Natural Lifter</p>
+        <div class="avatar">
+            WH
+        </div>
 
-<p>来自武汉的健身爱好者</p>
+        <h1>White Hu</h1>
 
-<p>记录训练、饮食与成长</p>
+        <div class="subtitle">
+            Fitness Journey
+        </div>
 
-<hr>
+        <div class="location">
+            📍 Wuhan, China
+        </div>
 
-<h3>我的平台</h3>
+    </div>
 
-<a href="#">YouTube</a>
-<a href="#">TikTok</a>
-<a href="#">抖音</a>
-<a href="#">小红书</a>
+    <div class="card">
+
+        <h2>About Me</h2>
+
+        <p>
+            Natural lifter from Wuhan.
+            Documenting my fitness journey, nutrition,
+            muscle building and personal growth.
+        </p>
+
+    </div>
+
+    <div class="card">
+
+        <h2>Current Stats</h2>
+
+        <div class="stats">
+
+            <div class="stat">
+                <div class="number">173</div>
+                <div>Height (cm)</div>
+            </div>
+
+            <div class="stat">
+                <div class="number">70</div>
+                <div>Weight (kg)</div>
+            </div>
+
+            <div class="stat">
+                <div class="number">20%</div>
+                <div>Body Fat</div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="card">
+
+        <h2>My Platforms</h2>
+
+        <div class="socials">
+
+            <a href="#" class="social-btn">
+                🎥 YouTube
+            </a>
+
+            <a href="#" class="social-btn">
+                🎵 TikTok
+            </a>
+
+            <a href="#" class="social-btn">
+                📷 Instagram
+            </a>
+
+            <a href="#" class="social-btn">
+                📕 Xiaohongshu
+            </a>
+
+            <a href="#" class="social-btn">
+                🎬 Douyin
+            </a>
+
+            <a href="#" class="social-btn">
+                ✉ Contact
+            </a>
+
+        </div>
+
+    </div>
+
+    <footer>
+        © 2026 White Hu · Fitness Journey
+    </footer>
+
+</div>
 
 </body>
 </html>
